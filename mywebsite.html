@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: navy;
+            font-family: fantasy;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: indigo;
+        }
+        .topnav a {
+            float: left;
+            text-align: center;
+            color: powderblue;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: gold;
+            color: navy;
+        }
+        .active {
+            background-color: red;
+            color: silver;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#Contact">Contact</a>
+    </div> 
+
+    <section class="myslider">
+        <center>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhqeL-pfthEFXuSZ7eUFuBrskMUBSYmDpElOXvWHpWAw&s=10" class="myslides" style="height: 500px; width: 700px";>
+        <img src="https://png.pngtree.com/png-vector/20231211/ourmid/pngtree-group-of-fast-food-products-png-image_11219877.png"
+            class="myslides" style="height: 500px; width: 700px" ;>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8k5c4g9mYXTK0aCsBWGX3TBKU-2--lCU2ihLGIAHWQ6ztMuy-hv-WEeQ&s=10"
+            class="myslides" style="height: 500px; width: 700px" ;>
+            </center>
+    </section>
+
+    <script>
+        var myindex=0
+        carousel()
+        
+        function carousel() {
+        var i
+        var x= document.getElementsByClassName("myslides")
+        for (i=0; i<x.length; i++) {
+            x[i].style.display="none"
+         }
+        myindex++
+        if (myindex>x.length) {
+            myindex=1
+         }
+        x[myindex-1].style.display="block"
+        setTimeout(carousel, 3000)
+        }
+    </script>
+</body>
+</html>
